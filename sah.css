@@ -75,7 +75,7 @@
   color: white;
 }
 
-.itemTop{
+.itemLeft{
     background-color: black;
     color: white;
     display: flex;
@@ -83,7 +83,7 @@
     padding: 5px;
 }
 
-.itemBottom{
+.itemRight{
     background-color: black;
     color: white;
     transform: rotate(-180deg);
