@@ -1,0 +1,80 @@
+.board {
+  display: flex;
+  height: 500px;
+  width: 500px;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: auto;
+}
+.row {
+  display: flex;
+  height: 65px;
+  width: 500px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 12.5%;
+  height: 100%;
+  margin: auto;
+}
+
+.row .item:nth-of-type(even) {
+  background-color: #8d3607;
+}
+
+.row .item:nth-of-type(odd) {
+  background-color: #ff9a00;
+}
+
+.row:nth-of-type(even) .item:nth-of-type(even) {
+  background-color: #ff9a00;
+}
+
+.row:nth-of-type(even) .item:nth-of-type(odd) {
+  background-color: #8d3607;
+}
+
+.container {
+  border: 49px solid #462921;
+  height: 590px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.X {
+  display: flex;
+  height: 35px;
+  width: 500px;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  width: 12.5%;
+  height: 33px;
+  background-color: black;
+  color: white;
+}
+
+.Y {
+  display: flex;
+  height: 35px;
+  width: 500px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  width: 12.5%;
+  height: 33px;
+  background-color: black;
+  color: white;
+}
