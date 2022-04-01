@@ -1,10 +1,12 @@
 .board {
   display: flex;
-  height: 500px;
+  height: 600px;
   width: 500px;
   justify-content: center;
   flex-flow: row wrap;
-  margin: auto;
+  margin-left: 25%;
+  border: 15px solid rgba(0, 0, 0, 0.438);
+  border-radius: 10px;
 }
 .row {
   display: flex;
@@ -36,13 +38,6 @@
 
 .row:nth-of-type(even) .item:nth-of-type(odd) {
   background-color: #8d3607;
-}
-
-.container {
-  border: 49px solid #462921;
-  height: 590px;
-  width: 500px;
-  border-radius: 10px;
 }
 
 .X {
