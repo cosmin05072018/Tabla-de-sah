@@ -55,6 +55,7 @@
   height: 33px;
   background-color: black;
   color: white;
+  transform: rotate(-180deg);
 }
 
 .Y {
