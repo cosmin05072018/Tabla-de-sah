@@ -74,3 +74,20 @@
   background-color: black;
   color: white;
 }
+
+.itemTop{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.itemBottom{
+    background-color: black;
+    color: white;
+    transform: rotate(-180deg);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
