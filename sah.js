@@ -1,11 +1,24 @@
-const item = document.querySelectorAll(".item");
-/*
-for (let i = 0; i < item.length; i++) {
-  item[i].addEventListener("click", () => {
-    if (item % 2 === 0) {
-        item.style.backgroundColor = "black";
-      }
-  });
-}
-*/
+/*const piese = document.querySelectorAll(".item");
+console.log(piese);
 
+for (let i = 0; i < piese.length; i++){
+    piese[i].addEventListener("click", ()=>{
+        console.log("run");
+    })
+}
+
+const tura =  document.getElementById("tura");
+for (let i = 0; i < tura.length; i++){
+    tura[i].addEventListener("click", ()=>{
+        console.log("run");
+    })
+} 
+console.log(tura);
+*/
+const tura = document.getElementsByName("svg:not(:root).svg-inline--fa");
+console.log(tura);
+for (let i = 0; i < tura.length; i++){
+    tura[i].addEventListener("click", ()=>{
+        console.log("run");
+    })
+}
