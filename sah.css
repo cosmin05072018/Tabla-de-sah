@@ -22,7 +22,6 @@
   width: 12.5%;
   height: 100%;
   margin: auto;
-  cursor: pointer;
 }
 
 .row .item:nth-of-type(even) {
@@ -119,4 +118,18 @@
   height: 100%;
   border: 1px solid black;
   color: black;
+}
+
+
+/*stilizam piesele de sah*/
+
+svg:not(:root).svg-inline--fa {
+    overflow: visible;
+    font-size: 25px;
+}
+
+svg:not(:root).svg-inline--fa:hover {
+    overflow: visible;
+    font-size: 35px;
+    cursor: pointer;
 }
