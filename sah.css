@@ -122,13 +122,13 @@
 
 svg:not(:root).svg-inline--fa {
   overflow: visible;
-  font-size: 25px;
+  font-size: 45px;
 }
 
 svg:not(:root).svg-inline--fa:hover {
   overflow: visible;
-  font-size: 35px;
+  font-size: 60px;
   cursor: pointer;
   -webkit-box-shadow: 5px 5px 15px 5px #c2a1a1;
-  box-shadow: 5px 5px 15px 5px #fcf8f8;
+  box-shadow: 5px 5px 15px 5px #ffffff;
 }
