@@ -58,15 +58,13 @@
   transform: rotate(-180deg);
 }
 
-.top:nth-child(1){
-    margin-left: 20px;
+.top:nth-child(1) {
+  margin-left: 20px;
 }
 
-.top:nth-child(8){
-    margin-right: 20px;
+.top:nth-child(8) {
+  margin-right: 20px;
 }
-
-
 
 .Y {
   display: flex;
@@ -85,33 +83,33 @@
   color: white;
 }
 
-.bottom:nth-child(1){
-    margin-left: 20px;
+.bottom:nth-child(1) {
+  margin-left: 20px;
 }
 
-.bottom:nth-child(8){
-    margin-right: 20px;
+.bottom:nth-child(8) {
+  margin-right: 20px;
 }
 
-.itemLeft{
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    padding: 5px;
+.itemLeft {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px;
 }
 
-.itemRight{
-    background-color: black;
-    color: white;
-    transform: rotate(-180deg);
-    display: flex;
-    align-items: center;
-    padding: 5px;
+.itemRight {
+  background-color: black;
+  color: white;
+  transform: rotate(-180deg);
+  display: flex;
+  align-items: center;
+  padding: 5px;
 }
 
-.row .itemTop{
-    display: flex;
+.row .itemTop {
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 12.5%;
@@ -120,17 +118,17 @@
   color: black;
 }
 
-
 /*stilizam piesele de sah*/
 
 svg:not(:root).svg-inline--fa {
-    overflow: visible;
-    font-size: 25px;
+  overflow: visible;
+  font-size: 25px;
 }
 
 svg:not(:root).svg-inline--fa:hover {
-    overflow: visible;
-    font-size: 35px;
-    cursor: pointer;
+  overflow: visible;
+  font-size: 35px;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 15px 5px #c2a1a1;
+  box-shadow: 5px 5px 15px 5px #fcf8f8;
 }
-
