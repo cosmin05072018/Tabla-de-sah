@@ -1,6 +1,3 @@
-const piese = document.querySelectorAll(".img");
-const item = document.querySelectorAll(".item");
-
 const plasarePiese = {
   //asezarea pieselor albe
   A1: ["alb", "tura"],
@@ -41,17 +38,11 @@ const plasarePiese = {
   G7: ["negru", "pion"],
   H7: ["negru", "pion"],
 };
+const piese = document.querySelectorAll(".img");
+const item = document.querySelectorAll(".item");
 
-console.log(plasarePiese);
-
-for (let i = 0; i < item.length; i++) {
-  item[i].addEventListener("click", () => {
-    console.log("item");
+for (let i = 0; i < piese.length; i++) {
+  piese[i].addEventListener("click", () => {
+    console.log('run');
   });
-}
-
-for (let y = 0; y < piese.length; y++) {
-  piese[y].addEventListener("click", () => {
-    console.log("piese");
-  });s
 }

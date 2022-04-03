@@ -135,4 +135,5 @@ svg:not(:root).svg-inline--fa:hover {
 .img{
   width: 80%;
   height: 80%;
+  cursor: pointer;
 }
