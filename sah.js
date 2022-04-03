@@ -52,6 +52,6 @@ for (let i = 0; i < item.length; i++) {
 
 for (let y = 0; y < piese.length; y++) {
   piese[y].addEventListener("click", () => {
-    piese = item;
-  });
+    console.log("piese");
+  });s
 }
