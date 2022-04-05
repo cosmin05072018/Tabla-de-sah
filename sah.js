@@ -122,6 +122,8 @@ const renderTable = () => {
 };
 
 renderTable();
+//pana aici am lucrat la afisarea tablei de sah
+//mai jos incepe distractia :))))
 
 const piese = document.querySelectorAll(".img");
 const item = document.querySelectorAll(".item");
