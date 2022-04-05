@@ -20,6 +20,8 @@ const row8 = document.querySelector(".row8");
 *** ROW1 VA AVEA CA SI VALOARE DENUMIRILE PIESELOR DE CULOARE NEAGRA INTR-UN ARRAY ***
  */
 
+//aici mai jos, practic, ii spunem browserului cate "patratele" vrem sa avem
+
 const chessTable = {
   row1: [
     "turnAlb",
@@ -31,12 +33,14 @@ const chessTable = {
     "calAlb",
     "turnAlb",
   ],
-  row2: Array(8).fill("pionAlb"),
-  row3: Array(8).fill(null),
-  row4: Array(8).fill(null),
-  row5: Array(8).fill(null),
-  row6: Array(8).fill(null),
-  row7: Array(8).fill("pionNegru"),
+
+  //cifra 8 simbolizeaza numarul de patratele
+  row2: Array(8).fill("pionAlb"), //aici ii spunem cati pioni albi vrem, pe care ii va returna din switch-ul de mai jos
+  row3: Array(8).fill(null), //le dam valoarea null pentru ca nu vrem sa se afle nimic acolo
+  row4: Array(8).fill(null), //le dam valoarea null pentru ca nu vrem sa se afle nimic acolo
+  row5: Array(8).fill(null), //le dam valoarea null pentru ca nu vrem sa se afle nimic acolo
+  row6: Array(8).fill(null), //le dam valoarea null pentru ca nu vrem sa se afle nimic acolo
+  row7: Array(8).fill("pionNegru"), //aici ii spunem cati pioni negri vrem
   row8: [
     "turnNegru",
     "calNegru",
@@ -46,6 +50,7 @@ const chessTable = {
     "nebunNegru",
     "calNegru",
     "turnNegru",
+
   ],
 };
 
@@ -84,20 +89,27 @@ const decideChessPieceImg = (piece) => {
   }
 };
 
+//PANA AICI AVEM FUNCTION EXPRESSION NUMIT "decideChessPieceImg"
+
+
+//AICI AVEM UN ALT FUNCTION EXPRESSION NUMIT "renderRow" CARE ARE 2 PARAMETRI(rowToRender si rowItems)
 const renderRow = (rowToRender, rowItems) => {
-  let htmlToReturn = "";
+  let htmlToReturn = ""; //aici am declarat o variabila care, prin for-ul de mai jos, va fi completata cu imagini
   for (let i = 0; i < rowItems.length; i++) {
     let pieceImg = decideChessPieceImg(rowItems[i]);
     if (pieceImg) {
-      htmlToReturn += `<div class="item" row=${rowToRender} positionInRow=${i}><img class="img" piece=${rowItems[i]} row=${rowToRender} positionInRow=${i} src="../Tabla-de-sah/piese/${pieceImg}"></div>`;
+      htmlToReturn += `<div class="item" 
+      =${rowToRender} positionInRow=${i}><img class="img" piece=${rowItems[i]} row=${rowToRender} positionInRow=${i} src="../Tabla-de-sah/piese/${pieceImg}"></div>`;
     } else {
-      htmlToReturn += `<div class="item" row=${rowToRender} positionInRow=${i}></div>`;
+      htmlToReturn += `<div class="item" row=${rowToRender} positionInRow=${i}></div>`; //aici afisam patratelele care nu au piese
     }
   }
 
-  return htmlToReturn;
+  return htmlToReturn; //acum returnam valorile pe care le-am obtinut-o in urma for-ului de mai sus
+  
 };
 
+//AICI AVEM UN ALT FUNCTION EXPRESSION, CARE VA FACE URMATORUL LUCRU: mai sus avem acea functie cu 2 argumente, pe care le va primi de a functia de mai jos numita: renderTable
 const renderTable = () => {
   row1.innerHTML = renderRow("1", chessTable.row1);
   row2.innerHTML = renderRow("2", chessTable.row2);
