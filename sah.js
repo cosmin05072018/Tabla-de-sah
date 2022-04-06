@@ -123,15 +123,15 @@ const renderTable = () => {
 
 renderTable();
 //pana aici am lucrat la afisarea tablei de sah
+
 //mai jos incepe distractia :))))
 
-const piese = document.querySelectorAll(".img");
-const item = document.querySelectorAll(".item");
+const piese = document.querySelectorAll(".img"); //aici am declarat o variabila numita "piese" careia i-am atribuit valoarea pieselor
+const item = document.querySelectorAll(".item"); //aici am declarat o variabila numita "item" careia i-am atribuit valoarea patratelor
 
 let pieceToMove = null;
 let currentPosition = null;
-let positionToMovePieceTo = null;
-
+//cele doua variabile de mai sus, adica "pieceToMove" si "currentPosition" le vom initializa valoarea null si le vom folosi mai jos 
 const movePiece = (currentPosition, piece, nextPosition) => {
   console.log(
     `De la randul ${currentPosition.row}, pozitia ${
