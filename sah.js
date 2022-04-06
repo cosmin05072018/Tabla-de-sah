@@ -50,7 +50,6 @@ const chessTable = {
     "nebunNegru",
     "calNegru",
     "turnNegru",
-
   ],
 };
 
@@ -91,7 +90,6 @@ const decideChessPieceImg = (piece) => {
 
 //PANA AICI AVEM FUNCTION EXPRESSION NUMIT "decideChessPieceImg"
 
-
 //AICI AVEM UN ALT FUNCTION EXPRESSION NUMIT "renderRow" CARE ARE 2 PARAMETRI(rowToRender si rowItems)
 const renderRow = (rowToRender, rowItems) => {
   let htmlToReturn = ""; //aici am declarat o variabila care, prin for-ul de mai jos, va fi completata cu imagini
@@ -106,7 +104,6 @@ const renderRow = (rowToRender, rowItems) => {
   }
 
   return htmlToReturn; //acum returnam valorile pe care le-am obtinut-o in urma for-ului de mai sus
-  
 };
 
 //AICI AVEM UN ALT FUNCTION EXPRESSION, CARE VA FACE URMATORUL LUCRU: mai sus avem acea functie cu 2 argumente, pe care le va primi de a functia de mai jos numita: renderTable
@@ -131,24 +128,22 @@ const item = document.querySelectorAll(".item"); //aici am declarat o variabila 
 
 let pieceToMove = null;
 let currentPosition = null;
-//cele doua variabile de mai sus, adica "pieceToMove" si "currentPosition" le vom initializa valoarea null si le vom folosi mai jos 
+//cele doua variabile de mai sus, adica "pieceToMove" si "currentPosition" le vom initializa valoarea null si le vom folosi mai jos
+
+
+//aici avem un FUNCTION EXPRESSION care primeste trei argumente: "currentPosition", "piece" si "nextPosition"
 const movePiece = (currentPosition, piece, nextPosition) => {
-  console.log(
+/*  console.log(
     `De la randul ${currentPosition.row}, pozitia ${
       Number(currentPosition.index) + 1
     }, se muta piesa ${piece} la randul ${nextPosition.row}, pozitia ${
       Number(nextPosition.index) + 1
     }`
-  );
+  );*/
   chessTable[`row${nextPosition.row}`][nextPosition.index] = piece;
   renderTable();
 };
 
-const reset = () => {
-  currentPosition = null;
-  pieceToMove = null;
-  nextPosition = null;
-};
 
 for (let y = 0; y < piese.length; y++) {
   piese[y].addEventListener("click", (e) => {
@@ -173,7 +168,7 @@ for (let i = 0; i < item.length; i++) {
 
     if (currentPosition && pieceToMove && nextPosition) {
       movePiece(currentPosition, pieceToMove, nextPosition);
-      reset();
+      
     }
   });
 }
