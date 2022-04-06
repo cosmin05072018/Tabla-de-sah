@@ -106,7 +106,7 @@ const renderRow = (rowToRender, rowItems) => {
   return htmlToReturn; //acum returnam valorile pe care le-am obtinut-o in urma for-ului de mai sus
 };
 
-//AICI AVEM UN ALT FUNCTION EXPRESSION, CARE VA FACE URMATORUL LUCRU: mai sus avem acea functie cu 2 argumente, pe care le va primi de a functia de mai jos numita: renderTable
+//AICI AVEM UN ALT FUNCTION EXPRESSION, CARE VA FACE URMATORUL LUCRU: mai sus avem acea functie cu 2 parametri, pe care le va primi de a functia de mai jos numita: renderTable
 const renderTable = () => {
   row1.innerHTML = renderRow("1", chessTable.row1);
   row2.innerHTML = renderRow("2", chessTable.row2);
@@ -131,7 +131,7 @@ let currentPosition = null;
 //cele doua variabile de mai sus, adica "pieceToMove" si "currentPosition" le vom initializa valoarea null si le vom folosi mai jos
 
 
-//aici avem un FUNCTION EXPRESSION care primeste trei argumente: "currentPosition", "piece" si "nextPosition"
+//aici avem un FUNCTION EXPRESSION care primeste trei parametri: "currentPosition", "piece" si "nextPosition"
 const movePiece = (currentPosition, piece, nextPosition) => {
 /*  console.log(
     `De la randul ${currentPosition.row}, pozitia ${
@@ -144,7 +144,7 @@ const movePiece = (currentPosition, piece, nextPosition) => {
   renderTable();
 };
 
-//mai jos vom avea un for care ne va ajuta sa stergem valoarea initiala in momentul mutarii piesei
+//mai jos vom avea un for care ne va ajuta sa luam valorile si atributele pieselor si stergem valoarea initiala in momentul mutarii piesei
 for (let y = 0; y < piese.length; y++) {
   piese[y].addEventListener("click", (e) => {
     e.stopPropagation();
@@ -155,10 +155,13 @@ for (let y = 0; y < piese.length; y++) {
       index: piese[y].attributes.positionInRow.value,
     };
 
-    chessTable[`row${currentPosition.row}`][currentPosition.index] = null;
+    chessTable[`row${currentPosition.row}`][currentPosition.index] = null; // va "sterge" valoarea initiala, adica atunci cand va fi mutata piesa, ea nu va mai aparea in locul in care era 
   });
 }
 
+
+//aici avem un for care ne va ajuta sa mutam piesa
+//va prelua parametrii functiei "movePiece": currentPosition si nextPosition
 for (let i = 0; i < item.length; i++) {
   item[i].addEventListener("click", () => {
     nextPosition = {
