@@ -140,11 +140,11 @@ const movePiece = (currentPosition, piece, nextPosition) => {
       Number(nextPosition.index) + 1
     }`
   );*/
-  chessTable[`row${nextPosition.row}`][nextPosition.index] = piece;
+  chessTable[`row${nextPosition.row}`][nextPosition.index] = piece; //luand valorile pieselor si a patratelor, vom afisa piesele pe alte patrate
   renderTable();
 };
 
-
+//mai jos vom avea un for care ne va ajuta sa stergem valoarea initiala in momentul mutarii piesei
 for (let y = 0; y < piese.length; y++) {
   piese[y].addEventListener("click", (e) => {
     e.stopPropagation();
