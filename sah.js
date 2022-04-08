@@ -130,10 +130,9 @@ let pieceToMove = null;
 let currentPosition = null;
 //cele doua variabile de mai sus, adica "pieceToMove" si "currentPosition" le vom initializa valoarea null si le vom folosi mai jos
 
-
 //aici avem un FUNCTION EXPRESSION care primeste trei parametri: "currentPosition", "piece" si "nextPosition"
 const movePiece = (currentPosition, piece, nextPosition) => {
-/*  console.log(
+  /*  console.log(
     `De la randul ${currentPosition.row}, pozitia ${
       Number(currentPosition.index) + 1
     }, se muta piesa ${piece} la randul ${nextPosition.row}, pozitia ${
@@ -155,10 +154,9 @@ for (let y = 0; y < piese.length; y++) {
       index: piese[y].attributes.positionInRow.value,
     };
 
-    chessTable[`row${currentPosition.row}`][currentPosition.index] = null; // va "sterge" valoarea initiala, adica atunci cand va fi mutata piesa, ea nu va mai aparea in locul in care era 
+    chessTable[`row${currentPosition.row}`][currentPosition.index] = null; // va "sterge" valoarea initiala, adica atunci cand va fi mutata piesa, ea nu va mai aparea in locul in care era
   });
 }
-
 
 //aici avem un for care ne va ajuta sa mutam piesa
 //va prelua parametrii functiei "movePiece": currentPosition si nextPosition
@@ -171,7 +169,6 @@ for (let i = 0; i < item.length; i++) {
 
     if (currentPosition && pieceToMove && nextPosition) {
       movePiece(currentPosition, pieceToMove, nextPosition);
-      
     }
   });
 }

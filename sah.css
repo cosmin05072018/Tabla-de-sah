@@ -1,11 +1,5 @@
 body{
   background-color: rgba(7, 3, 3, 0.712);
-  overflow: hidden;
-}
-
-*{
-  margin: 0;
-  padding: 0;
 }
 
 .container{
