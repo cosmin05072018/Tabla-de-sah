@@ -92,18 +92,17 @@ const decideChessPieceImg = (piece) => {
 
 //AICI AVEM UN ALT FUNCTION EXPRESSION NUMIT "renderRow" CARE ARE 2 PARAMETRI(rowToRender si rowItems)
 const renderRow = (rowToRender, rowItems) => {
-  let htmlToReturn = ""; //aici am declarat o variabila care, prin for-ul de mai jos, va fi completata cu imagini
+  let htmlToReturn = ""; //aici am declarat o variabila care, prin for-ul de mai jos, va fi completata cu piesele si patratele
   for (let i = 0; i < rowItems.length; i++) {
     let pieceImg = decideChessPieceImg(rowItems[i]);
     if (pieceImg) {
-      htmlToReturn += `<div class="item" 
-      =${rowToRender} positionInRow=${i}><img class="img" piece=${rowItems[i]} row=${rowToRender} positionInRow=${i} src="../Tabla-de-sah/piese/${pieceImg}"></div>`;
+      htmlToReturn += `<div class="item" =${rowToRender} positionInRow=${i}><img class="img" piece=${rowItems[i]} row=${rowToRender} positionInRow=${i} src="../Tabla-de-sah/piese/${pieceImg}"></div>`;
     } else {
       htmlToReturn += `<div class="item" row=${rowToRender} positionInRow=${i}></div>`; //aici afisam patratelele care nu au piese
     }
   }
 
-  return htmlToReturn; //acum returnam valorile pe care le-am obtinut-o in urma for-ului de mai sus
+  return htmlToReturn; //acum returnam valorile pe care le-am obtinut in urma for-ului de mai sus, altfel ar iesi undefined
 };
 
 //AICI AVEM UN ALT FUNCTION EXPRESSION, CARE VA FACE URMATORUL LUCRU: mai sus avem acea functie cu 2 parametri, pe care le va primi de a functia de mai jos numita: renderTable
